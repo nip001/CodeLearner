@@ -1,0 +1,12 @@
+
+LET nums = 5
+PRINT "What is the Fibonacci of 5?"
+LET a = 0
+LET b = 1
+WHILE nums > 1 REPEAT
+    LET c = a + b
+    LET a = b
+    LET b = c
+    LET nums = nums - 1
+ENDWHILE
+PRINT c
