@@ -35,12 +35,12 @@ def main():
         parser = Parser(lexer,emitter)
         parser.program() 
         if(parser.parseError):
-            return  make_response(jsonify({'Error ':parser.parseErrorMessage}),400)
+            return  make_response(jsonify({'output':parser.parseErrorMessage}),200)
         else:
             emitter.writeFile() # Write the output to file.
             subprocess.call(["gcc","out.c"])
             data = subprocess.check_output("./a.exe",universal_newlines=True)
-            return make_response(jsonify({'Output':data}),200)
+            return make_response(jsonify({'output':data}),200)
     # print("Parsing Complete")
 
     # token = lexer.getToken()

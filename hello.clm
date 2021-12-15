@@ -1,6 +1,4 @@
-
-LET nums = 5
-PRINT "What is the Fibonacci of 5?"
+LET nums = 6
 LET a = 0
 LET b = 1
 WHILE nums > 1 REPEAT
